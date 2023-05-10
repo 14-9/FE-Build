@@ -1,10 +1,8 @@
-import React from "react";
-import styled from "../styles/css/homePage.module.css";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import { IoChevronDownSharp } from "react-icons/io5";
 import { useQuery } from "react-query";
+import { Link } from "react-router-dom";
+import styled from "../styles/css/homePage.module.css";
 import { rankingListAxios } from "../apis/wineList";
+import { useState } from "react";
 import RankingPost from "../components/RankingPost";
 
 function HomePage() {
@@ -39,7 +37,7 @@ function HomePage() {
         >
           <div className={styled.toggle}>
             <button onClick={() => setIsOpenToggle(!isOpenToggle)}>
-              <IoChevronDownSharp />
+              {/* <IoChevronDownSharp /> */}
               &nbsp; BEST 와인 랭킹순위 보기
             </button>
           </div>

@@ -1,6 +1,6 @@
 import React from "react";
-import styled from "../styles/css/rankingPost.module.css";
 import { useNavigate } from "react-router-dom";
+import styled from "../styles/css/rankingPost.module.css";
 
 function RankingPost({ post }) {
   const navigate = useNavigate();
