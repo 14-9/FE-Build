@@ -1,0 +1,60 @@
+@import "../base/variables";
+
+header {
+  box-shadow: $shadow3;
+
+  nav {
+    @include flex-space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1.5%;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    a h1 {
+      @include logo;
+      font-size: 2rem;
+      font-family: $font-playFair;
+      color: black;
+      position: relative;
+      padding-left: 30px;
+      text-shadow: none;
+      z-index: 100;
+
+      &::before {
+        content: "WLW";
+        width: 50px;
+        height: 50px;
+        background-color: $color--wine;
+        border-radius: 50%;
+        font-size: 10px;
+        color: #fff;
+        text-shadow: none;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+      }
+    }
+
+    @include flex-space-between;
+
+    .loginCon,
+    .logoutCon {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      width: auto;
+      width: 500px;
+
+      button {
+        @include button-black;
+        width: 180px;
+        line-height: 35px;
+        border-radius: 30px;
+        margin-right: 10%;
+      }
+    }
+  }
+}
