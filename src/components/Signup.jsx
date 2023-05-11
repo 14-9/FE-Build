@@ -13,6 +13,7 @@ function Signup() {
 
   const addmutation = useMutation(signUpUserAxios, {
     onSuccess: () => {
+      navigate("/account/login");
     },
   });
 
@@ -26,17 +27,17 @@ function Signup() {
     };
     if (userId.length === 0) {
       alert("ID를 입력해주세요");
-    } else if (userPassword.length === 0) {
-      alert("PW를 입력해주세요");
-    } else if (userNickName.length === 0) {
-      alert("닉네임을 입력해주세요");
+      return;
     }
-    
-
-    console.log("등록되는 회원 정보 => ", newUser);
-
+    if (userPassword.length === 0) {
+      alert("PW를 입력해주세요");
+      return;
+    }
+    if (userNickName.length === 0) {
+      alert("닉네임을 입력해주세요");
+      return;
+    }
     addmutation.mutate(newUser);
-    
   };
 
   return (

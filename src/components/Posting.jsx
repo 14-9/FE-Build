@@ -21,7 +21,7 @@ function Posting({ nickName, wineName, isModalOpen }) {
       queryClient.invalidateQueries("reviews");
     },
     onError: () => {
-      alert("ERROR: 서버 에러 발생");
+      // alert("ERROR: 서버 에러 발생");
     },
   });
 
